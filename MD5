@@ -1,10 +1,10 @@
-1997687431b1b27020e93468e6278a68 *DESCRIPTION
+8dac7cb38118999c7ff63c5b8b8c10cc *DESCRIPTION
 f882a3ee6bdc3690c49cedfdcd60aaad *NAMESPACE
-630e8b5083140ee29ef88853e50c99a9 *R/grabNRCSdata.R
+2aed1fd22dfd5b679b5a4d154cb94d12 *R/grabNRCSdata.R
 7679f5701e61d5cd89fbc289c90c1a10 *R/grabNRCSelements.R
 094523ef604f344790bd86c119ee2b4b *R/grabNRCSmeta.R
 77c25a92c42e3ee9eb11cdd6dcd3213f *data/elementCodes.rda
 5e15a322b0ee3d5ea961f89dc81a8d3b *man/elementCodes.Rd
-e719311a807d8c1b08833c87caf030b4 *man/grabNRCS.data.Rd
+25fdc9e62a765ee52cb7b6e23dc7d375 *man/grabNRCS.data.Rd
 a181bc914f7a5673c19a55cb1105ebb2 *man/grabNRCS.elements.Rd
 fe05b2111a064708fcede11973f8881a *man/grabNRCS.meta.Rd

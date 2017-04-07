@@ -18,10 +18,10 @@ grabNRCS.data(network, site_id, timescale, DayBgn, DayEnd)
 \item{DayEnd}{Optional. Specify the end date (as YYYY-MM-DD ) for the returned data, otherwise the end of the period of record is returned.\cr}
 }
 \value{
-Returns a data frame of requested data and a list of varaibles with no data. If the output is not specified, the data frame is returned as 'NRCS.df' to the global environment. A list of missing variables is also returned to the Global Environment, as 'missingVars'.\cr
+Returns a data frame of requested data and a list of varaibles with no data.\cr
 }
 \description{
-A data downloading tool for NRCS networks. Data are returned to the global environment as NRCS.df, if output isn't specified. Data retrieval is limited by the speed of the connection, if timeout errors persist break requested time periods down into smaller chunks, or use a faster connection.
+A data downloading tool for NRCS networks. Data retrieval is limited by the speed of the connection, if timeout errors persist break requested time periods down into smaller chunks, or use a faster connection.
 }
 \examples{
 grabNRCS.data(network="SNTLT", site_id=1198, timescale="monthly")

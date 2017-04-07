@@ -3,7 +3,7 @@
 
 #' @author Robert Lee \email{rhlee@colorado.edu}
 
-#' @description A data downloading tool for NRCS networks. Data are returned to the global environment as NRCS.df, if output isn't specified. Data retrieval is limited by the speed of the connection, if timeout errors persist break requested time periods down into smaller chunks, or use a faster connection.
+#' @description A data downloading tool for NRCS networks. Data retrieval is limited by the speed of the connection, if timeout errors persist break requested time periods down into smaller chunks, or use a faster connection.
 
 #' @param network The network of the NRCS/AWDB site of interest. Currently only works for options: 'SCAN','SNTL','SNTLT', and 'OTHER'.\cr
 #' @param site_id The NRCS site ID. Use grabNRCS.meta to retrieve a list of available sites in a specified network. Consider using the package 'metScanR' to locate sites.\cr
@@ -11,7 +11,7 @@
 #' @param DayBgn Optional. Specify the beginning date (as YYYY-MM-DD ) for the returned data, otherwise the beginning of the period of record is returned.\cr
 #' @param DayEnd Optional. Specify the end date (as YYYY-MM-DD ) for the returned data, otherwise the end of the period of record is returned.\cr
 #'
-#' @return Returns a data frame of requested data and a list of varaibles with no data. If the output is not specified, the data frame is returned as 'NRCS.df' to the global environment. A list of missing variables is also returned to the Global Environment, as 'missingVars'.\cr
+#' @return Returns a data frame of requested data and a list of varaibles with no data.\cr
 
 #' @keywords environment, data, environmental data, atmosphere, atmopsheric data, climate, in-situ, weather\cr
 
@@ -97,7 +97,7 @@ grabNRCS.data<-function(network, site_id, timescale, DayBgn, DayEnd){
     # Remove all NA columns, and report which data varaiables they were
     tempDF<-as.data.frame(dfNRCS[-1,])
     missingVars<-names(which(colSums(is.na(tempDF))==nrow(tempDF)))
-    return(missingVars)
+    missingVars<-missingVars
 
     # Output the final results to the global environment
     NRCS.df<-tempDF[,-which(colSums(is.na(tempDF))==nrow(tempDF))]
